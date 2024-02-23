@@ -1,0 +1,3 @@
+[submodule "packages/phoenix"]
+	path = packages/phoenix
+	url = git@github.com:bolanosdev-bun/phoenix.git
