@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+#phoenix
+packages/phoenix
+
 # next.js
 /.next/
 /out/
