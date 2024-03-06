@@ -7,9 +7,13 @@
     "build": "remix build",
     "dev": "remix dev --manual",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "remix-serve ./build/index.js",
+    "start": "remix-serve ./build/index.js --bun",
     "typecheck": "tsc"
   },
+  "workspaces": [
+    "packages/phoenix/libraries/*",
+    "packages/phoenix/components/primitives/*"
+  ],
   "dependencies": {
     "@remix-run/css-bundle": "^2.8.0",
     "@remix-run/node": "^2.8.0",
