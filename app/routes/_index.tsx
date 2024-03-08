@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "@phoenix-ui/react-button";
+import { Text } from "@phoenix-ui/react-text";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -10,7 +12,10 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
+      <Text colors={{ text: { color: "text-red", weight: "600" } }}>
+        I am a text
+      </Text>
+      <br />
       <Button
         action="primary"
         onClick={() => {
