@@ -1,5 +1,4 @@
 import { json } from "@remix-run/node";
-import { useEffect } from "react";
 import {
   Form,
   Link,
@@ -17,10 +16,13 @@ import {
 
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import appStylesHref from "./app.css";
+
+import tailWindStylesHref from "./tailwind.css?url";
 import baselineStylesHref from "@phoenix-ui/baseline/compiled/baseline.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: baselineStylesHref },
+  { rel: "stylesheet", href: tailWindStylesHref },
   { rel: "stylesheet", href: appStylesHref },
 ];
 
