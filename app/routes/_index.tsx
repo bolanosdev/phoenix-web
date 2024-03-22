@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Button } from "@phoenix-ui/react-button";
-import { Text } from "@phoenix-ui/react-text";
+import { Section } from "@phoenix-ui/section";
+import { Button } from "@phoenix-ui/button";
+import { Text, Link, Heading } from "@phoenix-ui/text";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,13 +12,25 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <Section>
+      <Heading tag="h1">I am a header</Heading>
       <Text colors={{ text: { color: "text-red", weight: "600" } }}>
         I am a text
       </Text>
       <br />
+      <Link href="/contacts/kent%20c.-dodds">I am a link</Link>
+      <br />
+      <Link
+        onClick={() => {
+          alert("i am a link");
+        }}
+      >
+        I am a link with a click event
+      </Link>
+      <br />
       <Button
         action="primary"
+        className="foo"
         height={{ value: "14" }}
         colors={{ background: { color: "bg-red" } }}
         dark={{ colors: { background: { color: "bg-lime" } } }}
@@ -36,6 +49,6 @@ export default function Index() {
       >
         I am a button
       </Button>
-    </div>
+    </Section>
   );
 }
