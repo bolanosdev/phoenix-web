@@ -22,7 +22,7 @@ import baselineStylesHref from "@phoenix-ui/baseline/compiled/baseline.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: baselineStylesHref },
-  { rel: "stylesheet", href: tailWindStylesHref },
+  //{ rel: "stylesheet", href: tailWindStylesHref },
   { rel: "stylesheet", href: appStylesHref },
 ];
 
